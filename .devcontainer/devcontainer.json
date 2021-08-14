@@ -1,5 +1,5 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.166.1/containers/python-3-anaconda
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/python-3-anaconda
 {
 	"name": "Anaconda (Python 3)",
 	"build": { 
@@ -13,8 +13,8 @@
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
-		"terminal.integrated.shell.linux": "/bin/bash",
 		"python.pythonPath": "/opt/conda/bin/python",
+		"python.languageServer": "Pylance",
 		"python.linting.enabled": true,
 		"python.linting.pylintEnabled": true,
 		"python.formatting.autopep8Path": "/opt/conda/bin/autopep8",
@@ -27,7 +27,9 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-python.python"
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-toolsai.jupyter"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
