@@ -34,6 +34,22 @@ This will take a while. But it will populate your cache, so future iteration is 
 jupyter-book clean lectures
 ```
 
+### Alternative Setup: using a devcontainer + Docker in VSCode
+
+1. Install the [VSCode Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+2. With Docker running, press `F1` and select `Remote-Containers: Clone Repository in Container Volume`
+
+3. Enter the URL of the repo into the resulting prompt. If working with a specific branch, enter the URL of that branch.
+
+4. After the devcontainer builds, open a terminal in VSCode and activate the compiled conda environment:
+
+```
+. activate lecture-datascience
+```
+
+This will give an environment from which the lectures can then be edited and built.
+
 ### Releasing updates to GH-PAGES
 
 To make a release you need to setup a tagged release using `publish-` tag. 
